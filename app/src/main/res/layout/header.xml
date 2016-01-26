@@ -50,7 +50,7 @@
                 android:cropToPadding="true"
                 android:src="@drawable/running" />
 
-            <TextView
+            <ru.goryachev.tmate.ui.components.OpenSansTextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
-            <TextView
+            <ru.goryachev.tmate.ui.components.OpenSansTextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <TextView
+            <ru.goryachev.tmate.ui.components.OpenSansTextView
                 android:id="@+id/info_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

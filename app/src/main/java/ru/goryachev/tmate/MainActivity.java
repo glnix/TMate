@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.channel_activity);
         blurBackground();
+        //
+        Utils.setOnClickListnersForTextView(this, findViewById(R.id.main_container));
     }
 
     //Размыть фон "бегущего человека"

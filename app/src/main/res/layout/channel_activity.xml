@@ -10,13 +10,14 @@
 
     <include layout="@layout/header" />
 
+
     <LinearLayout
+        android:id="@+id/channel_tabs"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:visibility="visible"
-        android:id="@+id/channel_tabs">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,11 +85,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:id="@+id/divider">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,48 +109,48 @@
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/content">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-                android:layout_above="@+id/bottom_panel">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottom_panel"
+                android:visibility="visible">
 
                 <include layout="@layout/posts" />
             </ScrollView>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/bottom_panel"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="bottom"
-                android:layout_alignParentEnd="false"
                 android:layout_alignParentBottom="true"
-                android:id="@+id/bottom_panel"
-                android:baselineAligned="false">
+                android:layout_alignParentEnd="false"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
                     <ImageView
+                        android:id="@+id/imageView20"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:id="@+id/imageView20"
-                        android:src="@drawable/lists"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
-                        android:cropToPadding="true" />
+                        android:cropToPadding="true"
+                        android:src="@drawable/lists" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -158,13 +159,13 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:id="@+id/imageView21"
                         android:layout_width="40dp"
                         android:layout_height="4030dp"
-                        android:id="@+id/imageView21"
-                        android:src="@drawable/add"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
-                        android:cropToPadding="true" />
+                        android:cropToPadding="true"
+                        android:src="@drawable/add" />
                 </FrameLayout>
 
                 <RelativeLayout
@@ -173,29 +174,30 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:id="@+id/imageView22"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:id="@+id/imageView22"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
-                        android:src="@drawable/group"
-                        android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true" />
+                        android:src="@drawable/group" />
 
                     <ImageView
+                        android:id="@+id/imageView23"
                         android:layout_width="10dp"
                         android:layout_height="10dp"
-                        android:id="@+id/imageView23"
-                        android:src="@drawable/oval_indicator"
-                        android:layout_alignTop="@+id/imageView22"
-                        android:layout_alignRight="@+id/imageView22"
                         android:layout_alignEnd="@+id/imageView22"
+                        android:layout_alignRight="@+id/imageView22"
+                        android:layout_alignTop="@+id/imageView22"
                         android:layout_marginRight="-10dp"
-                        android:layout_marginTop="-5dp" />
+                        android:layout_marginTop="-5dp"
+                        android:src="@drawable/oval_indicator" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
 
     </FrameLayout>
+
 
 </LinearLayout>

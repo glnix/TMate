@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
@@ -10,6 +11,7 @@
     tools:showIn="@layout/channel_activity">
 
     <RelativeLayout
+        android:id="@+id/toolbar_main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
@@ -28,7 +30,7 @@
             android:cropToPadding="true"
             android:src="@drawable/ic_chevron_left_black_36dp" />
 
-        <TextView
+        <ru.goryachev.tmate.ui.components.OpenSansTextView
             android:id="@+id/cannel_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,9 +40,9 @@
             android:text="Nike Official Channel"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            app:typeface="semibold"/>
 
-        <TextView
+        <ru.goryachev.tmate.ui.components.OpenSansTextView
             android:id="@+id/join_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +55,8 @@
             android:text="Join"
             android:textColor="#4dbae3"
             android:textIsSelectable="false"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            app:typeface="semibold"/>
 
     </RelativeLayout>
 
