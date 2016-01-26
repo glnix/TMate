@@ -1,12 +1,17 @@
 package ru.goryachev.tmate;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class Utils {
 
@@ -50,5 +55,39 @@ public class Utils {
 
         result.setPixels(pixels, 0, result.getWidth(), 0, 0, result.getWidth(), result.getHeight());
         return result;
+    }
+
+    public static void setOnClickListnersForTextView(Activity activity, View v) {
+        final int id;
+        try {
+            if (v instanceof ViewGroup) {
+                ViewGroup vg = (ViewGroup) v;
+                for (int i = 0; i < vg.getChildCount(); i++) {
+                    View child = vg.getChildAt(i);
+                    setOnClickListnersForTextView(activity, child);
+                }
+            } else if (v instanceof TextView) {
+                id = v.getId();
+                switch (id) {
+                    case R.id.join_btn:
+                        activity.findViewById(id).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Log.d("TextView " + id, "On Click ");
+
+                            }
+                        });
+                        break;
+                    default:
+                        activity.findViewById(id).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Log.d("TextView " + id, "On Click DEFAULT ");
+                            }
+                        });
+                }
+            }
+        } catch (Exception e) {
+        }
     }
 }
