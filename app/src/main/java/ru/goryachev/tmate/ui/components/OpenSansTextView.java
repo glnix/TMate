@@ -42,6 +42,7 @@ public class OpenSansTextView extends TextView {
 
     private void setFont(Context context, AttributeSet attrs) {
         if (!isInEditMode()) {
+            Log.d("View tag", ""+(String) getTag());
             TypedArray a = context.getTheme().obtainStyledAttributes(
                     attrs,
                     R.styleable.OpenSansTextView,
@@ -64,6 +65,12 @@ public class OpenSansTextView extends TextView {
                     case 2:
                         Log.d("OpenSansTextView " + getId(), "setFont OpenSans-Bold");
                         tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans-Bold.ttf");
+                        setTypeface(tf);
+                        break;
+
+                    case 3:
+                        Log.d("OpenSansTextView " + getId(), "setFont OpenSans-Light");
+                        tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans-Light.ttf");
                         setTypeface(tf);
                         break;
                 }

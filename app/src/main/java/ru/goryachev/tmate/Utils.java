@@ -11,7 +11,7 @@ import android.renderscript.ScriptIntrinsicBlur;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class Utils {
 
@@ -57,8 +57,7 @@ public class Utils {
         return result;
     }
 
-    public static void setOnClickListnersForTextView(Activity activity, View v) {
-        final int id;
+    public static void setOnClickListnersForTextView(final Activity activity, View v) {
         try {
             if (v instanceof ViewGroup) {
                 ViewGroup vg = (ViewGroup) v;
@@ -66,25 +65,16 @@ public class Utils {
                     View child = vg.getChildAt(i);
                     setOnClickListnersForTextView(activity, child);
                 }
-            } else if (v instanceof TextView) {
-                id = v.getId();
-                switch (id) {
-                    case R.id.join_btn:
-                        activity.findViewById(id).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Log.d("TextView " + id, "On Click ");
-
-                            }
-                        });
-                        break;
-                    default:
-                        activity.findViewById(id).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Log.d("TextView " + id, "On Click DEFAULT ");
-                            }
-                        });
+            } else if (v instanceof View) {
+                final String tag = (String) v.getTag();
+                Log.d("TextView " + tag, "On Click ");
+                if (tag != null) {
+                    v.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(activity, tag + " click event!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         } catch (Exception e) {

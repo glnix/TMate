@@ -33,8 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
+                android:clickable="true"
                 android:cropToPadding="true"
-                android:src="@drawable/list" />
+                android:src="@drawable/list"
+                android:tag="List tab" />
         </LinearLayout>
 
         <View
@@ -57,7 +59,8 @@
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
                 android:cropToPadding="true"
-                android:src="@drawable/statistics" />
+                android:src="@drawable/statistics"
+                android:tag="Statistic tab" />
         </LinearLayout>
 
         <View
@@ -79,8 +82,10 @@
                 android:layout_width="15dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:clickable="true"
                 android:cropToPadding="true"
-                android:src="@drawable/users" />
+                android:src="@drawable/users"
+                android:tag="Users tab" />
         </LinearLayout>
     </LinearLayout>
 
@@ -149,8 +154,10 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
+                        android:clickable="true"
                         android:cropToPadding="true"
-                        android:src="@drawable/lists" />
+                        android:src="@drawable/lists"
+                        android:tag="List" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -164,8 +171,10 @@
                         android:layout_height="4030dp"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
+                        android:clickable="true"
                         android:cropToPadding="true"
-                        android:src="@drawable/add" />
+                        android:src="@drawable/add"
+                        android:tag="Plus" />
                 </FrameLayout>
 
                 <RelativeLayout
@@ -180,8 +189,10 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:adjustViewBounds="true"
+                        android:clickable="true"
                         android:cropToPadding="true"
-                        android:src="@drawable/group" />
+                        android:src="@drawable/group"
+                        android:tag="Group" />
 
                     <ImageView
                         android:id="@+id/imageView23"

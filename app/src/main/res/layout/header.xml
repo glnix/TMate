@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:visibility="visible"
-    android:id="@+id/header"
     tools:showIn="@layout/channel_activity">
 
     <ImageView
@@ -63,7 +64,7 @@
                 android:text="+ 13"
                 android:textColor="#ffffff"
                 android:textSize="13sp"
-                android:textStyle="bold" />
+                app:typeface="semibold" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -74,7 +75,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/ic_star_border_white_24dp" />
+                android:src="@drawable/ic_star_border_white_24dp"
+                android:clickable="true"
+                android:tag="Star" />
 
         </RelativeLayout>
 
@@ -97,7 +100,8 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Channel for people who really love sport,  fitness and running. Don’t be shine and join us!"
                 android:textColor="#ffffff"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                app:typeface="normal" />
         </FrameLayout>
 
         <RelativeLayout
@@ -130,7 +134,7 @@
                         android:text="1,5k"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
 
                     <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView5"
@@ -144,7 +148,7 @@
                         android:text="members"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -165,7 +169,7 @@
                         android:text="301"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
 
                     <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView6"
@@ -179,7 +183,7 @@
                         android:text="posts"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -197,10 +201,10 @@
                         android:layout_toEndOf="@+id/bage"
                         android:layout_toRightOf="@+id/bage"
                         android:gravity="center_vertical"
-                        android:text="301"
+                        android:text="12k"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
 
                     <ru.goryachev.tmate.ui.components.OpenSansTextView
                         android:id="@+id/textView8"
@@ -211,10 +215,10 @@
                         android:layout_toEndOf="@+id/bage"
                         android:layout_toRightOf="@+id/bage"
                         android:gravity="center_vertical"
-                        android:text="posts"
+                        android:text="hours"
                         android:textColor="#ffffff"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        app:typeface="semibold" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -231,10 +235,12 @@
                 android:layout_gravity="center_horizontal|top"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/info_bkg"
+                android:tag="Info"
                 android:text="info"
                 android:textColor="#ffffff"
                 android:textIsSelectable="false"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:typeface="semibold" />
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>

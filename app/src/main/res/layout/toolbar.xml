@@ -53,6 +53,7 @@
             android:layout_marginRight="15dp"
             android:background="@drawable/join_bkg"
             android:text="Join"
+            android:tag="Join"
             android:textColor="#4dbae3"
             android:textIsSelectable="false"
             android:textSize="12sp"
