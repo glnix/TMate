@@ -24,7 +24,7 @@ public class OpenSansTextView extends TextView {
 
     public OpenSansTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setFont();
+        setFont(context, attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -33,12 +33,6 @@ public class OpenSansTextView extends TextView {
         setFont(context, attrs);
     }
 
-    private void setFont() {
-        if (!isInEditMode()) {
-            Log.d("OpenSansTextView " + getId(), "setFontOpenSans default constructor");
-            Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans.ttf");
-        }
-    }
 
     private void setFont(Context context, AttributeSet attrs) {
         if (!isInEditMode()) {
